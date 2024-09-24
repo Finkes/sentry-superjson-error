@@ -12,7 +12,6 @@ const nextConfig = {
 export default withSentryConfig(nextConfig, {
 // For all available options, see:
 // https://github.com/getsentry/sentry-webpack-plugin#options
-
   org: "my-org",
   project: "javascript-nextjs",
 
@@ -27,7 +26,7 @@ export default withSentryConfig(nextConfig, {
 
 // Automatically annotate React components to show their full name in breadcrumbs and session replay
   reactComponentAnnotation: {
-    enabled: true
+    enabled: false // setting this to true will break the build
   },
 
 // Route browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers.
